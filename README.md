@@ -1,61 +1,34 @@
 # Unit 18 PWA Homework: Online/Offline Budget Trackers
 
-Add functionality to our existing Budget Tracker application to allow for offline access and functionality.
+This program is intended to explore the usage of offline caching through a combination of MongoDB, Mongoose, and Service Workers. In this regard, the site is fully functional, allowing the user to access a cached version of the website while offline, input changes to the database offline, and have those pending changes automatically update the database upon reconnect to the Internet. 
 
-The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they should populate the total when brought back online.
+## Intended Usage
 
-Offline Functionality:
+According to the user story that came bundled with this project, the intent of this program is to enable a frequent traveller to track their finances in areas with and without steady Internet access. To that end, the user should be able to enter deposits and expenses and see this information tracked via graph. Furthermore, this data should persist between sessions and across devices. Beyond even this, however, the app is capable of caching itself on the user's local device, allowing somewhat limited functionality even without Internet access. In particular, users can still enter deposits and expenses as they would normally, and these changes will be stored locally until the user's device once more connects to the Internet, at which point the database will be updated as normal. Note that, currently, the table and chart don't retain offline information across reloads, but that this information is still being cached, meaning that an offline user entering information and then reloading the page won't see their offline changes until they connect to the Internet once more. 
 
-  * Enter deposits offline
+## Features
 
-  * Enter expenses offline
+- Enter deposits and expenses, both online and offline!
+- Cache the page for limited offline usage
+- Store information entered during offline usage 
+- Update the database upon reconnect with any offline information
+- Display all input via table and graph
 
-When brought back online:
+## Link to Published Page
 
-  * Offline entries should be added to tracker.
-
-## User Story
-AS AN avid traveller
-I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
-SO THAT my account balance is accurate when I am traveling
-
-## Business Context
-
-Giving users a fast and easy way to track their money is important, but allowing them to access that information anytime is even more important. Having offline functionality is paramount to our applications success.
+(https://github.com/fanofstuff/Online-Offline-BT)
 
 
-## Acceptance Criteria
-GIVEN a user is on Budget App without an internet connection
-WHEN the user inputs a withdrawal or deposit
-THEN that will be shown on the page, and added to their transaction history when their connection is back online.
+## How to Use
 
-- - -
+1. Simply open the application (Link: https://ancient-earth-12938.herokuapp.com/), 
+2. Enter any deposits (Add Funds) or expenses (Subtract Funds) that you have, 
+3. and be confident in the knowledge that your information will persist and remain accessible. 
 
-## Commit Early and Often
+Note that you might need to reload the page twice upon first loading so as to cache the entire application for offline usage. 
 
-* One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+## Credits
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
+Plainly, the step-by-step directions offered by Jonathon Watson, our instructor, really made this quite easy - worryingly easy, actually; hopefully I don't have outdated information! 
 
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
-
-* Follow these guidelines for committing:
-
-  * Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
-
-  * Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
-
-  * Don't commit half done work, for the sake of your collaborators (and your future self!)
-
-  * Test your application before you commit to ensure functionality at every step in the development process
-
-* We would like you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-* You are required to submit the following:
-
-  * the URL to the deployed application
-
-  * the URL to the Github repository
-
+© 2019 fanofstuff
