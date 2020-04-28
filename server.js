@@ -20,6 +20,11 @@ mongoose.connect("mongodb://localhost/budget", {
   useFindAndModify: false
 });
 
+/* Connect to the DB; Keeping this for now; useful for resetting database */
+// mongoose.connect('mongodb://localhost/budget',function(){
+//   mongoose.connection.db.dropDatabase();
+// });
+
 // routes
 app.use(require("./routes/api.js"));
 
